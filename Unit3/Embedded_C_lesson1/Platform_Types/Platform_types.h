@@ -1,13 +1,13 @@
 #ifndef PLATFORM_TYPES_H_
 #define PLATFORM_TYPES_H_
 
-#define CPU_TYPE	 	CPU_TYPES_32
+#define CPU_TYPE	 CPU_TYPES_32
 #define CPU_BIT_ORDER	  MSB_FIRST
 #define CPU_BYTE_ORDER	  HIGH_BYTE_ORDER
 
        
 typedef unsigned char        u8
-typedef signed char	        s8
+typedef signed char	       s8
 
 typedef unsigned short       u16
 typedef signed short         s16
@@ -19,8 +19,8 @@ typedef unsigned long long   u64
 typedef signed long long     s64
 
 typedef float                f32
-typedef double      	        f64
-typedef long double 		 f128
+typedef double      	      f64
+typedef long double       f128
 
 typedef volatile u8          vu8
 typedef volatile s8          vs8 
