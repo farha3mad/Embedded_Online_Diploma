@@ -19,8 +19,8 @@ typedef unsigned long long   u64
 typedef signed long long     s64
 
 typedef float                f32
-typedef double      	       f64
-typedef long double        f128
+typedef double      	     f64
+typedef long double          f128
 
 typedef volatile u8          vu8
 typedef volatile s8          vs8 
