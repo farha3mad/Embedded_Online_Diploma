@@ -36,18 +36,16 @@ typedef volatile unsigned int vuint32_t;
 
 int main(void)
 {
-	//	Bit 2 IOPAEN: IO port A clock enable
-	//	0: IO port A clock disabled
-	//	1: IO port A clock enabled
-	RCC_APB2ENR |= 1<<2;
-	//init GPIOA
-	GPIOA_CRH &= 0xFF0FFFFF;//control
-	GPIOA_CRH |= 0x00200000;//output data register
+	RCC_APB2ENR |= 1<<2; //enable IO portA clock
+
+	//Init GPIOA
+	GPIOA_CRH &= 0xFF0FFFFF;
+	GPIOA_CRH |= 0x00200000;
 	while(1)
 	{
-		GPIOA_ODR |= 1<<13; //to write set PIN 13
-		for(int i=0;i<5000;i++);
-		GPIOA_ODR &= ~(1<<13);//to write set PIN 13
-		for(int i=0;i<5000;i++);
+		GPIOA_ODR |= 1<<13;       //set bit 13
+		for(int i=0;i<5000;i++);  // arbitrary delay
+		GPIOA_ODR &= ~(1<<13);    // reset bit 13
+		for(int i=0;i<5000;i++);  // arbitrary delay
 	}
 }
