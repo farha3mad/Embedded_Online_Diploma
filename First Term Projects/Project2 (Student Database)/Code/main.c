@@ -5,7 +5,6 @@
  *
  */
 #include "student_system.h"
-
 int main()
 {
     //for I/O buffer problem

@@ -6,10 +6,6 @@
  */
 
 #include "student_system.h"
-//for I/O buffer problem
-setvbuf(stdout,NULL,_IONBF,0);
-setvbuf(stderr,NULL,_IONBF,0);
-
 FIFO_STATE fifo_init(FIFO_t* fifo, student_data* buffer,unsigned int length){
     //checking the existence
     if(!buffer || !fifo){
@@ -240,10 +236,10 @@ FIFO_STATE find_student_by_first_name(FIFO_t* fifo){
         printf("\t[ERROR]Database does not exist\n");
         return FIFO_NULL;
     }
-    //check if FIFO is FULL
-    if(fifo->Count == fifo->Length){
-        printf("\t[ERROR]Database is FULL\n");
-        return FIFO_FULL;
+    //check if FIFO is EMPTY
+    if(fifo->Count == 0){
+        printf("\t[ERROR]Database is Empty\n");
+        return FIFO_EMPTY;
     }
     //pointer to the first element in queue
     student_data* ptr = fifo->Base;
@@ -481,6 +477,8 @@ FIFO_STATE update_student_by_id(FIFO_t* fifo){
                 printf("[ERROR] Invalid choice!!\n");
             }
             break;
+        }
+          ptr++;
     }
 
     if(flag == 0){
@@ -489,4 +487,4 @@ FIFO_STATE update_student_by_id(FIFO_t* fifo){
 
     return FIFO_NO_ERROR;
 }
-}
+
