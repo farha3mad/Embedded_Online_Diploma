@@ -1,0 +1,31 @@
+CC=arm-none-eabi-
+CFLAGS= -mcpu=cortex-m3 -gdwarf-2 
+INCS=-I.
+SRC= $(wildcard *.c)
+OBJ= $(SRC:.c=.o)
+AS= $(wildcard *.s)
+OBJAS= $(AS:.s=.o)
+NAME=First_Project
+
+all: $(NAME).bin
+
+%.o: %.s
+	$(CC)as.exe $(CFLAGS) $< -o $@
+
+%.o: %.c
+	$(CC)gcc.exe  $(INCS) $(CFLAGS) -c $< -o $@
+
+
+$(NAME).elf:$(OBJ) $(OBJAS)
+	$(CC)ld.exe -T linker_script.ld $(OBJ) $(OBJAS) -o $@ -Map=map_flie.map
+
+$(NAME).bin: $(NAME).elf
+	$(CC)objcopy.exe -O binary $< $@
+
+clean:
+	rm *.elf *.bin
+clean_all:
+	rm *.o *.elf *.bin
+	
+	
+	
