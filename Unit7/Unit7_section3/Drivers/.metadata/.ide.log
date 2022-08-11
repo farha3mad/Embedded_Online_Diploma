@@ -1,0 +1,16 @@
+2022-08-08 04:25:52,776 [INFO] Activator:178 - 
+
+
+2022-08-08 04:25:52,776 [INFO] Activator:179 - !SESSION log4j initialized
+2022-08-08 04:26:24,232 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {}->http://sw-center.st.com:80: The target server failed to respond
+2022-08-08 04:26:24,237 [INFO] RetryExec:113 - Retrying request to {}->http://sw-center.st.com:80
+2022-08-08 04:26:43,768 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://download.eclipse.org:443: The target server failed to respond
+2022-08-08 04:26:43,768 [INFO] RetryExec:113 - Retrying request to {s}->https://download.eclipse.org:443
+2022-08-08 04:26:44,608 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://archive.eclipse.org:443: The target server failed to respond
+2022-08-08 04:26:44,608 [INFO] RetryExec:113 - Retrying request to {s}->https://archive.eclipse.org:443
+2022-08-08 04:26:45,578 [INFO] RetryExec:97 - I/O exception (org.apache.http.NoHttpResponseException) caught when processing request to {s}->https://download.eclipse.org:443: The target server failed to respond
+2022-08-08 04:26:45,578 [INFO] RetryExec:113 - Retrying request to {s}->https://download.eclipse.org:443
+2022-08-08 04:28:12,898 [INFO] Activator:178 - 
+
+
+2022-08-08 04:28:12,898 [INFO] Activator:179 - !SESSION log4j initialized

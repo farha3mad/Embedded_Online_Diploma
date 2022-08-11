@@ -1,0 +1,2 @@
+seven_segment.c:11:6:seven_segment_init	8	static
+seven_segment.c:55:6:seven_segment_write	16	static

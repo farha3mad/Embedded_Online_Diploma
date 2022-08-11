@@ -1,0 +1,8 @@
+LCD.c:11:6:Waiting	24	static
+LCD.c:19:6:lcd_kick	8	static
+LCD.c:26:6:lcd_is_busy	8	static
+LCD.c:137:6:lcd_init	8	static
+LCD.c:226:6:lcd_goto_xy	16	static
+LCD.c:242:6:lcd_cmd	16	static
+LCD.c:269:6:lcd_write_char	16	static
+LCD.c:295:6:lcd_write_word	24	static
