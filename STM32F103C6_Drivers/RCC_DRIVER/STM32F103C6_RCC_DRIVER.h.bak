@@ -1,0 +1,14 @@
+/*****************************************************************/
+/* Author      : Farha Emad                                      */
+/* Date        : 20 April 2023                                   */      
+/*****************************************************************/
+
+#ifndef	STM32F103C6_RCC_DRIVER_H
+#define STM32F103C6_RCC_DRIVER_H
+
+uint32_t MCAL_RCC_GetSYSCLK_Freq();
+uint32_t MCAL_RCC_GetHCLK_Freq();
+uint32_t MCAL_RCC_GetPCLK1_Freq();
+uint32_t MCAL_RCC_GetPCLK2_Freq();
+
+#endif

@@ -2,7 +2,6 @@
 "LCD_Driver/LCD.o"
 "STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o"
 "STM32F103C6_Drivers/lcd.o"
-"SevenSegment/seven_segment.o"
 "Src/main.o"
 "Src/syscalls.o"
 "Src/sysmem.o"

@@ -26,6 +26,7 @@
 #include "LCD.h"
 #include "KeyPad.h"
 #include "seven_segment.h"
+#include "STM32F103C6_EXTI_Driver.h"
 
 void clock_init()
 {
@@ -37,47 +38,12 @@ void clock_init()
 
 int main(void)
 {
-	clock_init();
-	lcd_init();
-	seven_segment_init();
 	
-	lcd_write_word("WELCOME");
-	Waiting(200);
-	lcd_cmd(LCD_CLEAR);
-	
-	char ch;
-	unsigned char lcd_begin[] = {'1','2','3','4','5','6','7','8','9','0'};
-	unsigned char seven_seg_begin[] = {ONE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,ZERO};
-	int i;
-	for(i=0 ; i<11 ; i++)
-	{
-		seven_segment_write(seven_seg_begin[i]);
-		lcd_write_char(lcd_begin[i]);
-		Waiting(40);
-	}
-	
-	lcd_cmd(LCD_CLEAR);
-	lcd_write_word("KEYPAD IS READY");
-	Waiting(200);
-	lcd_cmd(LCD_CLEAR);
-	
-	keypad_init();
-	while(1)
-	{
-		ch = keypad_getkey();
-		switch(ch)
-		{
-		case 'A':
-			break;
-		case '!':
-			lcd_cmd(LCD_CLEAR);
-			break;
-		default:
-			lcd_write_char(ch);
-			break;
-		}
-		
-		Waiting(1);
+	EXTI_PinConfig_t e1 ;
+	e1.EXTI_PIN = EXTI0PA0;
 
-	}
+		while(1){
+		Waiting(1);
+		}
+
 }

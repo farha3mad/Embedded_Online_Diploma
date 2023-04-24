@@ -10,7 +10,6 @@ RM := rm -rf
 -include sources.mk
 -include Startup/subdir.mk
 -include Src/subdir.mk
--include SevenSegment/subdir.mk
 -include STM32F103C6_Drivers/subdir.mk
 -include LCD_Driver/subdir.mk
 -include KeyPad_Driver/subdir.mk

@@ -22,7 +22,6 @@ SUBDIRS := \
 KeyPad_Driver \
 LCD_Driver \
 STM32F103C6_Drivers \
-SevenSegment \
 Src \
 Startup \
 

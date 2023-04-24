@@ -71,6 +71,67 @@ Discarded input sections
  .text          0x0000000000000000        0x0 KeyPad_Driver/KeyPad.o
  .data          0x0000000000000000        0x0 KeyPad_Driver/KeyPad.o
  .bss           0x0000000000000000        0x0 KeyPad_Driver/KeyPad.o
+ .data.keypad_rows
+                0x0000000000000000       0x10 KeyPad_Driver/KeyPad.o
+ .data.keypad_columns
+                0x0000000000000000       0x10 KeyPad_Driver/KeyPad.o
+ .text.keypad_init
+                0x0000000000000000      0x114 KeyPad_Driver/KeyPad.o
+ .text.keypad_getkey
+                0x0000000000000000      0x194 KeyPad_Driver/KeyPad.o
+ .debug_info    0x0000000000000000      0xb0a KeyPad_Driver/KeyPad.o
+ .debug_abbrev  0x0000000000000000      0x1a6 KeyPad_Driver/KeyPad.o
+ .debug_loc     0x0000000000000000       0x7c KeyPad_Driver/KeyPad.o
+ .debug_aranges
+                0x0000000000000000       0x28 KeyPad_Driver/KeyPad.o
+ .debug_ranges  0x0000000000000000       0x18 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000      0x21d KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000      0xa60 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x22 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x40 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x18 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x94 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x3c KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x34 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x16 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x57 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x97 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000      0x330 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0xfd KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x10 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x52 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x1f KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x43 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x20 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000      0x1a3 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x10 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x6a KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x1c KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x52 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x40 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x10 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x40 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0xd7 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x1c KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x3d KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x16 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000      0x145 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0xef KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000      0x1df KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x16 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x35 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x16 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x29 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000      0x124 KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0xca KeyPad_Driver/KeyPad.o
+ .debug_macro   0x0000000000000000       0x3a KeyPad_Driver/KeyPad.o
+ .debug_line    0x0000000000000000      0x76c KeyPad_Driver/KeyPad.o
+ .debug_str     0x0000000000000000     0x8b33 KeyPad_Driver/KeyPad.o
+ .comment       0x0000000000000000       0x7c KeyPad_Driver/KeyPad.o
+ .debug_frame   0x0000000000000000       0x50 KeyPad_Driver/KeyPad.o
+ .ARM.attributes
+                0x0000000000000000       0x33 KeyPad_Driver/KeyPad.o
+ COMMON         0x0000000000000000        0x4 KeyPad_Driver/KeyPad.o
  .group         0x0000000000000000        0xc LCD_Driver/LCD.o
  .group         0x0000000000000000        0xc LCD_Driver/LCD.o
  .group         0x0000000000000000        0xc LCD_Driver/LCD.o
@@ -113,8 +174,19 @@ Discarded input sections
  .text          0x0000000000000000        0x0 LCD_Driver/LCD.o
  .data          0x0000000000000000        0x0 LCD_Driver/LCD.o
  .bss           0x0000000000000000        0x0 LCD_Driver/LCD.o
+ .text.lcd_kick
+                0x0000000000000000       0x2c LCD_Driver/LCD.o
+ .text.lcd_is_busy
+                0x0000000000000000      0x1fc LCD_Driver/LCD.o
+ .text.lcd_init
+                0x0000000000000000      0x188 LCD_Driver/LCD.o
  .text.lcd_goto_xy
                 0x0000000000000000       0x54 LCD_Driver/LCD.o
+ .text.lcd_cmd  0x0000000000000000       0x44 LCD_Driver/LCD.o
+ .text.lcd_write_char
+                0x0000000000000000       0x44 LCD_Driver/LCD.o
+ .text.lcd_write_word
+                0x0000000000000000       0x78 LCD_Driver/LCD.o
  .debug_macro   0x0000000000000000      0xa60 LCD_Driver/LCD.o
  .debug_macro   0x0000000000000000       0x22 LCD_Driver/LCD.o
  .debug_macro   0x0000000000000000       0x40 LCD_Driver/LCD.o
@@ -151,7 +223,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x35 LCD_Driver/LCD.o
  .debug_macro   0x0000000000000000       0x16 LCD_Driver/LCD.o
  .debug_macro   0x0000000000000000       0x29 LCD_Driver/LCD.o
- .debug_macro   0x0000000000000000       0xb4 LCD_Driver/LCD.o
+ .debug_macro   0x0000000000000000      0x124 LCD_Driver/LCD.o
  .debug_macro   0x0000000000000000       0xca LCD_Driver/LCD.o
  .group         0x0000000000000000        0xc STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
  .group         0x0000000000000000        0xc STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
@@ -194,14 +266,31 @@ Discarded input sections
  .text          0x0000000000000000        0x0 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
  .data          0x0000000000000000        0x0 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
  .bss           0x0000000000000000        0x0 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .text.get_pin_position
+                0x0000000000000000       0xc6 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .text.MCAL_GPIO_init
+                0x0000000000000000      0x106 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
  .text.MCAL_GPIO_deinit
                 0x0000000000000000       0xd4 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .text.MCAL_GPIO_ReadPin
+                0x0000000000000000       0x2e STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
  .text.MCAL_GPIO_ReadPort
                 0x0000000000000000       0x1a STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .text.MCAL_GPIO_WritePin
+                0x0000000000000000       0x2e STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .text.MCAL_GPIO_WritePort
+                0x0000000000000000       0x1c STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
  .text.MCAL_GPIO_TogglePin
                 0x0000000000000000       0x22 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
  .text.MCAL_GPIO_LockPin
                 0x0000000000000000       0x54 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .debug_info    0x0000000000000000      0xd75 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .debug_abbrev  0x0000000000000000      0x241 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .debug_loc     0x0000000000000000      0x330 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .debug_aranges
+                0x0000000000000000       0x60 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .debug_ranges  0x0000000000000000       0x50 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .debug_macro   0x0000000000000000      0x20a STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
  .debug_macro   0x0000000000000000      0xa60 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
  .debug_macro   0x0000000000000000       0x22 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
  .debug_macro   0x0000000000000000       0x40 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
@@ -238,8 +327,14 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x35 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
  .debug_macro   0x0000000000000000       0x16 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
  .debug_macro   0x0000000000000000       0x29 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
- .debug_macro   0x0000000000000000       0xb4 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .debug_macro   0x0000000000000000      0x124 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
  .debug_macro   0x0000000000000000       0xca STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .debug_line    0x0000000000000000      0x737 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .debug_str     0x0000000000000000     0x8bb7 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .comment       0x0000000000000000       0x7c STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .debug_frame   0x0000000000000000      0x178 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+ .ARM.attributes
+                0x0000000000000000       0x33 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
  .group         0x0000000000000000        0xc STM32F103C6_Drivers/lcd.o
  .text          0x0000000000000000        0x0 STM32F103C6_Drivers/lcd.o
  .data          0x0000000000000000        0x0 STM32F103C6_Drivers/lcd.o
@@ -255,86 +350,7 @@ Discarded input sections
  .comment       0x0000000000000000       0x7c STM32F103C6_Drivers/lcd.o
  .ARM.attributes
                 0x0000000000000000       0x33 STM32F103C6_Drivers/lcd.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .group         0x0000000000000000        0xc SevenSegment/seven_segment.o
- .text          0x0000000000000000        0x0 SevenSegment/seven_segment.o
- .data          0x0000000000000000        0x0 SevenSegment/seven_segment.o
- .bss           0x0000000000000000        0x0 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000      0xa60 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x22 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x40 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x18 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x94 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x3c SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x34 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x16 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x57 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x97 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000      0x330 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0xfd SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x10 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x52 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x1f SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x43 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x20 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000      0x1a3 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x10 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x6a SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x1c SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x52 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x40 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x10 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x40 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0xd7 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x1c SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x3d SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x16 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000      0x145 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0xef SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000      0x1df SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x16 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x35 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x16 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0x29 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0xb4 SevenSegment/seven_segment.o
- .debug_macro   0x0000000000000000       0xca SevenSegment/seven_segment.o
+ .group         0x0000000000000000        0xc Src/main.o
  .group         0x0000000000000000        0xc Src/main.o
  .group         0x0000000000000000        0xc Src/main.o
  .group         0x0000000000000000        0xc Src/main.o
@@ -379,6 +395,8 @@ Discarded input sections
  .text          0x0000000000000000        0x0 Src/main.o
  .data          0x0000000000000000        0x0 Src/main.o
  .bss           0x0000000000000000        0x0 Src/main.o
+ .text.clock_init
+                0x0000000000000000       0x28 Src/main.o
  .debug_macro   0x0000000000000000      0xa60 Src/main.o
  .debug_macro   0x0000000000000000       0x22 Src/main.o
  .debug_macro   0x0000000000000000       0x40 Src/main.o
@@ -415,7 +433,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x35 Src/main.o
  .debug_macro   0x0000000000000000       0x16 Src/main.o
  .debug_macro   0x0000000000000000       0x29 Src/main.o
- .debug_macro   0x0000000000000000       0xb4 Src/main.o
+ .debug_macro   0x0000000000000000      0x124 Src/main.o
  .debug_macro   0x0000000000000000       0xca Src/main.o
  .group         0x0000000000000000        0xc Src/syscalls.o
  .group         0x0000000000000000        0xc Src/syscalls.o
@@ -663,7 +681,6 @@ LOAD KeyPad_Driver/KeyPad.o
 LOAD LCD_Driver/LCD.o
 LOAD STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
 LOAD STM32F103C6_Drivers/lcd.o
-LOAD SevenSegment/seven_segment.o
 LOAD Src/main.o
 LOAD Src/syscalls.o
 LOAD Src/sysmem.o
@@ -700,256 +717,201 @@ LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                 0x0000000008000000                g_pfnVectors
                 0x0000000008000130                . = ALIGN (0x4)
 
-.text           0x0000000008000130      0xcb8
+.text           0x0000000008000130      0x148
                 0x0000000008000130                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000008000130       0x40 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
  *(.text*)
- .text.keypad_init
-                0x0000000008000170      0x114 KeyPad_Driver/KeyPad.o
-                0x0000000008000170                keypad_init
- .text.keypad_getkey
-                0x0000000008000284      0x194 KeyPad_Driver/KeyPad.o
-                0x0000000008000284                keypad_getkey
- .text.Waiting  0x0000000008000418       0x38 LCD_Driver/LCD.o
-                0x0000000008000418                Waiting
- .text.lcd_kick
-                0x0000000008000450       0x2c LCD_Driver/LCD.o
-                0x0000000008000450                lcd_kick
- .text.lcd_is_busy
-                0x000000000800047c      0x1fc LCD_Driver/LCD.o
-                0x000000000800047c                lcd_is_busy
- .text.lcd_init
-                0x0000000008000678      0x188 LCD_Driver/LCD.o
-                0x0000000008000678                lcd_init
- .text.lcd_cmd  0x0000000008000800       0x44 LCD_Driver/LCD.o
-                0x0000000008000800                lcd_cmd
- .text.lcd_write_char
-                0x0000000008000844       0x44 LCD_Driver/LCD.o
-                0x0000000008000844                lcd_write_char
- .text.lcd_write_word
-                0x0000000008000888       0x78 LCD_Driver/LCD.o
-                0x0000000008000888                lcd_write_word
- .text.get_pin_position
-                0x0000000008000900       0xc6 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
-                0x0000000008000900                get_pin_position
- .text.MCAL_GPIO_init
-                0x00000000080009c6      0x106 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
-                0x00000000080009c6                MCAL_GPIO_init
- .text.MCAL_GPIO_ReadPin
-                0x0000000008000acc       0x2e STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
-                0x0000000008000acc                MCAL_GPIO_ReadPin
- .text.MCAL_GPIO_WritePin
-                0x0000000008000afa       0x2e STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
-                0x0000000008000afa                MCAL_GPIO_WritePin
- .text.MCAL_GPIO_WritePort
-                0x0000000008000b28       0x1c STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
-                0x0000000008000b28                MCAL_GPIO_WritePort
- .text.seven_segment_init
-                0x0000000008000b44       0xd4 SevenSegment/seven_segment.o
-                0x0000000008000b44                seven_segment_init
- .text.seven_segment_write
-                0x0000000008000c18       0x24 SevenSegment/seven_segment.o
-                0x0000000008000c18                seven_segment_write
- .text.clock_init
-                0x0000000008000c3c       0x28 Src/main.o
-                0x0000000008000c3c                clock_init
- .text.main     0x0000000008000c64       0xd0 Src/main.o
-                0x0000000008000c64                main
+ .text.Waiting  0x0000000008000170       0x38 LCD_Driver/LCD.o
+                0x0000000008000170                Waiting
+ .text.main     0x00000000080001a8       0x1c Src/main.o
+                0x00000000080001a8                main
  .text.Reset_Handler
-                0x0000000008000d34       0x50 Startup/startup_stm32f103c6tx.o
-                0x0000000008000d34                Reset_Handler
+                0x00000000080001c4       0x50 Startup/startup_stm32f103c6tx.o
+                0x00000000080001c4                Reset_Handler
  .text.Default_Handler
-                0x0000000008000d84        0x2 Startup/startup_stm32f103c6tx.o
-                0x0000000008000d84                EXTI2_IRQHandler
-                0x0000000008000d84                TIM8_TRG_COM_IRQHandler
-                0x0000000008000d84                TIM8_CC_IRQHandler
-                0x0000000008000d84                DebugMon_Handler
-                0x0000000008000d84                TIM1_CC_IRQHandler
-                0x0000000008000d84                HardFault_Handler
-                0x0000000008000d84                TIM6_IRQHandler
-                0x0000000008000d84                SysTick_Handler
-                0x0000000008000d84                PVD_IRQHandler
-                0x0000000008000d84                SDIO_IRQHandler
-                0x0000000008000d84                PendSV_Handler
-                0x0000000008000d84                NMI_Handler
-                0x0000000008000d84                EXTI3_IRQHandler
-                0x0000000008000d84                USB_HP_CAN_TX_IRQHandler
-                0x0000000008000d84                EXTI0_IRQHandler
-                0x0000000008000d84                I2C2_EV_IRQHandler
-                0x0000000008000d84                UsageFault_Handler
-                0x0000000008000d84                ADC1_2_IRQHandler
-                0x0000000008000d84                SPI1_IRQHandler
-                0x0000000008000d84                CAN_SCE_IRQHandler
-                0x0000000008000d84                TAMPER_IRQHandler
-                0x0000000008000d84                TIM8_UP_IRQHandler
-                0x0000000008000d84                DMA2_Channel2_IRQHandler
-                0x0000000008000d84                DMA1_Channel4_IRQHandler
-                0x0000000008000d84                USART3_IRQHandler
-                0x0000000008000d84                RTC_IRQHandler
-                0x0000000008000d84                DMA1_Channel7_IRQHandler
-                0x0000000008000d84                UART5_IRQHandler
-                0x0000000008000d84                ADC3_IRQHandler
-                0x0000000008000d84                TIM4_IRQHandler
-                0x0000000008000d84                CAN_RX1_IRQHandler
-                0x0000000008000d84                DMA2_Channel1_IRQHandler
-                0x0000000008000d84                I2C1_EV_IRQHandler
-                0x0000000008000d84                DMA1_Channel6_IRQHandler
-                0x0000000008000d84                UART4_IRQHandler
-                0x0000000008000d84                TIM3_IRQHandler
-                0x0000000008000d84                RCC_IRQHandler
-                0x0000000008000d84                TIM1_TRG_COM_IRQHandler
-                0x0000000008000d84                DMA1_Channel1_IRQHandler
-                0x0000000008000d84                Default_Handler
-                0x0000000008000d84                EXTI15_10_IRQHandler
-                0x0000000008000d84                TIM7_IRQHandler
-                0x0000000008000d84                TIM5_IRQHandler
-                0x0000000008000d84                EXTI9_5_IRQHandler
-                0x0000000008000d84                SPI2_IRQHandler
-                0x0000000008000d84                USB_LP_CAN_RX0_IRQHandler
-                0x0000000008000d84                MemManage_Handler
-                0x0000000008000d84                SVC_Handler
-                0x0000000008000d84                DMA1_Channel5_IRQHandler
-                0x0000000008000d84                EXTI4_IRQHandler
-                0x0000000008000d84                DMA1_Channel3_IRQHandler
-                0x0000000008000d84                FSMC_IRQHandler
-                0x0000000008000d84                TIM1_UP_IRQHandler
-                0x0000000008000d84                WWDG_IRQHandler
-                0x0000000008000d84                TIM2_IRQHandler
-                0x0000000008000d84                TIM1_BRK_IRQHandler
-                0x0000000008000d84                EXTI1_IRQHandler
-                0x0000000008000d84                RTCAlarm_IRQHandler
-                0x0000000008000d84                DMA2_Channel4_5_IRQHandler
-                0x0000000008000d84                USART2_IRQHandler
-                0x0000000008000d84                I2C2_ER_IRQHandler
-                0x0000000008000d84                DMA1_Channel2_IRQHandler
-                0x0000000008000d84                TIM8_BRK_IRQHandler
-                0x0000000008000d84                FLASH_IRQHandler
-                0x0000000008000d84                BusFault_Handler
-                0x0000000008000d84                USART1_IRQHandler
-                0x0000000008000d84                SPI3_IRQHandler
-                0x0000000008000d84                I2C1_ER_IRQHandler
-                0x0000000008000d84                DMA2_Channel3_IRQHandler
- *fill*         0x0000000008000d86        0x2 
+                0x0000000008000214        0x2 Startup/startup_stm32f103c6tx.o
+                0x0000000008000214                EXTI2_IRQHandler
+                0x0000000008000214                TIM8_TRG_COM_IRQHandler
+                0x0000000008000214                TIM8_CC_IRQHandler
+                0x0000000008000214                DebugMon_Handler
+                0x0000000008000214                TIM1_CC_IRQHandler
+                0x0000000008000214                HardFault_Handler
+                0x0000000008000214                TIM6_IRQHandler
+                0x0000000008000214                SysTick_Handler
+                0x0000000008000214                PVD_IRQHandler
+                0x0000000008000214                SDIO_IRQHandler
+                0x0000000008000214                PendSV_Handler
+                0x0000000008000214                NMI_Handler
+                0x0000000008000214                EXTI3_IRQHandler
+                0x0000000008000214                USB_HP_CAN_TX_IRQHandler
+                0x0000000008000214                EXTI0_IRQHandler
+                0x0000000008000214                I2C2_EV_IRQHandler
+                0x0000000008000214                UsageFault_Handler
+                0x0000000008000214                ADC1_2_IRQHandler
+                0x0000000008000214                SPI1_IRQHandler
+                0x0000000008000214                CAN_SCE_IRQHandler
+                0x0000000008000214                TAMPER_IRQHandler
+                0x0000000008000214                TIM8_UP_IRQHandler
+                0x0000000008000214                DMA2_Channel2_IRQHandler
+                0x0000000008000214                DMA1_Channel4_IRQHandler
+                0x0000000008000214                USART3_IRQHandler
+                0x0000000008000214                RTC_IRQHandler
+                0x0000000008000214                DMA1_Channel7_IRQHandler
+                0x0000000008000214                UART5_IRQHandler
+                0x0000000008000214                ADC3_IRQHandler
+                0x0000000008000214                TIM4_IRQHandler
+                0x0000000008000214                CAN_RX1_IRQHandler
+                0x0000000008000214                DMA2_Channel1_IRQHandler
+                0x0000000008000214                I2C1_EV_IRQHandler
+                0x0000000008000214                DMA1_Channel6_IRQHandler
+                0x0000000008000214                UART4_IRQHandler
+                0x0000000008000214                TIM3_IRQHandler
+                0x0000000008000214                RCC_IRQHandler
+                0x0000000008000214                TIM1_TRG_COM_IRQHandler
+                0x0000000008000214                DMA1_Channel1_IRQHandler
+                0x0000000008000214                Default_Handler
+                0x0000000008000214                EXTI15_10_IRQHandler
+                0x0000000008000214                TIM7_IRQHandler
+                0x0000000008000214                TIM5_IRQHandler
+                0x0000000008000214                EXTI9_5_IRQHandler
+                0x0000000008000214                SPI2_IRQHandler
+                0x0000000008000214                USB_LP_CAN_RX0_IRQHandler
+                0x0000000008000214                MemManage_Handler
+                0x0000000008000214                SVC_Handler
+                0x0000000008000214                DMA1_Channel5_IRQHandler
+                0x0000000008000214                EXTI4_IRQHandler
+                0x0000000008000214                DMA1_Channel3_IRQHandler
+                0x0000000008000214                FSMC_IRQHandler
+                0x0000000008000214                TIM1_UP_IRQHandler
+                0x0000000008000214                WWDG_IRQHandler
+                0x0000000008000214                TIM2_IRQHandler
+                0x0000000008000214                TIM1_BRK_IRQHandler
+                0x0000000008000214                EXTI1_IRQHandler
+                0x0000000008000214                RTCAlarm_IRQHandler
+                0x0000000008000214                DMA2_Channel4_5_IRQHandler
+                0x0000000008000214                USART2_IRQHandler
+                0x0000000008000214                I2C2_ER_IRQHandler
+                0x0000000008000214                DMA1_Channel2_IRQHandler
+                0x0000000008000214                TIM8_BRK_IRQHandler
+                0x0000000008000214                FLASH_IRQHandler
+                0x0000000008000214                BusFault_Handler
+                0x0000000008000214                USART1_IRQHandler
+                0x0000000008000214                SPI3_IRQHandler
+                0x0000000008000214                I2C1_ER_IRQHandler
+                0x0000000008000214                DMA2_Channel3_IRQHandler
+ *fill*         0x0000000008000216        0x2 
  .text.__libc_init_array
-                0x0000000008000d88       0x48 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
-                0x0000000008000d88                __libc_init_array
+                0x0000000008000218       0x48 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
+                0x0000000008000218                __libc_init_array
  *(.glue_7)
- .glue_7        0x0000000008000dd0        0x0 linker stubs
+ .glue_7        0x0000000008000260        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008000dd0        0x0 linker stubs
+ .glue_7t       0x0000000008000260        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008000dd0        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+ .eh_frame      0x0000000008000260        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
  *(.init)
- .init          0x0000000008000dd0        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crti.o
-                0x0000000008000dd0                _init
- .init          0x0000000008000dd4        0x8 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
+ .init          0x0000000008000260        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crti.o
+                0x0000000008000260                _init
+ .init          0x0000000008000264        0x8 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
  *(.fini)
- .fini          0x0000000008000ddc        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crti.o
-                0x0000000008000ddc                _fini
- .fini          0x0000000008000de0        0x8 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
-                0x0000000008000de8                . = ALIGN (0x4)
-                0x0000000008000de8                _etext = .
+ .fini          0x000000000800026c        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crti.o
+                0x000000000800026c                _fini
+ .fini          0x0000000008000270        0x8 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
+                0x0000000008000278                . = ALIGN (0x4)
+                0x0000000008000278                _etext = .
 
-.vfp11_veneer   0x0000000008000de8        0x0
- .vfp11_veneer  0x0000000008000de8        0x0 linker stubs
+.vfp11_veneer   0x0000000008000278        0x0
+ .vfp11_veneer  0x0000000008000278        0x0 linker stubs
 
-.v4_bx          0x0000000008000de8        0x0
- .v4_bx         0x0000000008000de8        0x0 linker stubs
+.v4_bx          0x0000000008000278        0x0
+ .v4_bx         0x0000000008000278        0x0 linker stubs
 
-.iplt           0x0000000008000de8        0x0
- .iplt          0x0000000008000de8        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+.iplt           0x0000000008000278        0x0
+ .iplt          0x0000000008000278        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
 
-.rodata         0x0000000008000de8       0x30
-                0x0000000008000de8                . = ALIGN (0x4)
+.rodata         0x0000000008000278        0xc
+                0x0000000008000278                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x0000000008000de8       0x2e Src/main.o
+ .rodata        0x0000000008000278        0xc Src/main.o
  *(.rodata*)
-                0x0000000008000e18                . = ALIGN (0x4)
- *fill*         0x0000000008000e16        0x2 
+                0x0000000008000284                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008000e18        0x0
- .rel.iplt      0x0000000008000e18        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+.rel.dyn        0x0000000008000284        0x0
+ .rel.iplt      0x0000000008000284        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
 
-.ARM.extab      0x0000000008000e18        0x0
-                0x0000000008000e18                . = ALIGN (0x4)
+.ARM.extab      0x0000000008000284        0x0
+                0x0000000008000284                . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000008000e18                . = ALIGN (0x4)
+                0x0000000008000284                . = ALIGN (0x4)
 
-.ARM            0x0000000008000e18        0x0
-                0x0000000008000e18                . = ALIGN (0x4)
-                0x0000000008000e18                __exidx_start = .
+.ARM            0x0000000008000284        0x0
+                0x0000000008000284                . = ALIGN (0x4)
+                0x0000000008000284                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008000e18                __exidx_end = .
-                0x0000000008000e18                . = ALIGN (0x4)
+                0x0000000008000284                __exidx_end = .
+                0x0000000008000284                . = ALIGN (0x4)
 
-.preinit_array  0x0000000008000e18        0x0
-                0x0000000008000e18                . = ALIGN (0x4)
-                0x0000000008000e18                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000000008000284        0x0
+                0x0000000008000284                . = ALIGN (0x4)
+                0x0000000008000284                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0000000008000e18                PROVIDE (__preinit_array_end = .)
-                0x0000000008000e18                . = ALIGN (0x4)
+                0x0000000008000284                PROVIDE (__preinit_array_end = .)
+                0x0000000008000284                . = ALIGN (0x4)
 
-.init_array     0x0000000008000e18        0x4
-                0x0000000008000e18                . = ALIGN (0x4)
-                0x0000000008000e18                PROVIDE (__init_array_start = .)
+.init_array     0x0000000008000284        0x4
+                0x0000000008000284                . = ALIGN (0x4)
+                0x0000000008000284                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008000e18        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
-                0x0000000008000e1c                PROVIDE (__init_array_end = .)
-                0x0000000008000e1c                . = ALIGN (0x4)
+ .init_array    0x0000000008000284        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+                0x0000000008000288                PROVIDE (__init_array_end = .)
+                0x0000000008000288                . = ALIGN (0x4)
 
-.fini_array     0x0000000008000e1c        0x4
-                0x0000000008000e1c                . = ALIGN (0x4)
+.fini_array     0x0000000008000288        0x4
+                0x0000000008000288                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008000e1c        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+ .fini_array    0x0000000008000288        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0000000008000e20                . = ALIGN (0x4)
-                0x0000000008000e20                _sidata = LOADADDR (.data)
+                0x000000000800028c                . = ALIGN (0x4)
+                0x000000000800028c                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0x20 load address 0x0000000008000e20
+.data           0x0000000020000000        0x0 load address 0x000000000800028c
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
  *(.data*)
- .data.keypad_rows
-                0x0000000020000000       0x10 KeyPad_Driver/KeyPad.o
-                0x0000000020000000                keypad_rows
- .data.keypad_columns
-                0x0000000020000010       0x10 KeyPad_Driver/KeyPad.o
-                0x0000000020000010                keypad_columns
-                0x0000000020000020                . = ALIGN (0x4)
-                0x0000000020000020                _edata = .
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _edata = .
 
-.igot.plt       0x0000000020000020        0x0 load address 0x0000000008000e40
- .igot.plt      0x0000000020000020        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
-                0x0000000020000020                . = ALIGN (0x4)
+.igot.plt       0x0000000020000000        0x0 load address 0x000000000800028c
+ .igot.plt      0x0000000020000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+                0x0000000020000000                . = ALIGN (0x4)
 
-.bss            0x0000000020000020       0x20 load address 0x0000000008000e40
-                0x0000000020000020                _sbss = .
-                0x0000000020000020                __bss_start__ = _sbss
+.bss            0x0000000020000000       0x1c load address 0x000000000800028c
+                0x0000000020000000                _sbss = .
+                0x0000000020000000                __bss_start__ = _sbss
  *(.bss)
- .bss           0x0000000020000020       0x1c c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
+ .bss           0x0000000020000000       0x1c c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
  *(.bss*)
  *(COMMON)
- COMMON         0x000000002000003c        0x4 KeyPad_Driver/KeyPad.o
-                0x000000002000003c                pincg
-                0x0000000020000040                . = ALIGN (0x4)
-                0x0000000020000040                _ebss = .
-                0x0000000020000040                __bss_end__ = _ebss
+                0x000000002000001c                . = ALIGN (0x4)
+                0x000000002000001c                _ebss = .
+                0x000000002000001c                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000040      0x600 load address 0x0000000008000e40
-                0x0000000020000040                . = ALIGN (0x8)
+                0x000000002000001c      0x604 load address 0x000000000800028c
+                0x0000000020000020                . = ALIGN (0x8)
+ *fill*         0x000000002000001c        0x4 
                 [!provide]                        PROVIDE (end = .)
-                0x0000000020000040                PROVIDE (_end = .)
-                0x0000000020000240                . = (. + _Min_Heap_Size)
- *fill*         0x0000000020000040      0x200 
-                0x0000000020000640                . = (. + _Min_Stack_Size)
- *fill*         0x0000000020000240      0x400 
-                0x0000000020000640                . = ALIGN (0x8)
+                0x0000000020000020                PROVIDE (_end = .)
+                0x0000000020000220                . = (. + _Min_Heap_Size)
+ *fill*         0x0000000020000020      0x200 
+                0x0000000020000620                . = (. + _Min_Stack_Size)
+ *fill*         0x0000000020000220      0x400 
+                0x0000000020000620                . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -964,153 +926,72 @@ LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .ARM.attributes
                 0x000000000000001d       0x2d c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtbegin.o
  .ARM.attributes
-                0x000000000000004a       0x33 KeyPad_Driver/KeyPad.o
+                0x000000000000004a       0x33 LCD_Driver/LCD.o
  .ARM.attributes
-                0x000000000000007d       0x33 LCD_Driver/LCD.o
+                0x000000000000007d       0x33 Src/main.o
  .ARM.attributes
-                0x00000000000000b0       0x33 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
+                0x00000000000000b0       0x21 Startup/startup_stm32f103c6tx.o
  .ARM.attributes
-                0x00000000000000e3       0x33 SevenSegment/seven_segment.o
+                0x00000000000000d1       0x2d c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
  .ARM.attributes
-                0x0000000000000116       0x33 Src/main.o
- .ARM.attributes
-                0x0000000000000149       0x21 Startup/startup_stm32f103c6tx.o
- .ARM.attributes
-                0x000000000000016a       0x2d c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
- .ARM.attributes
-                0x0000000000000197       0x1d c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
+                0x00000000000000fe       0x1d c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-m/crtn.o
 OUTPUT(Drivers.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000     0x39fe
- .debug_info    0x0000000000000000      0xb0a KeyPad_Driver/KeyPad.o
- .debug_info    0x0000000000000b0a      0xbc7 LCD_Driver/LCD.o
- .debug_info    0x00000000000016d1      0xd75 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
- .debug_info    0x0000000000002446      0xac9 SevenSegment/seven_segment.o
- .debug_info    0x0000000000002f0f      0xacd Src/main.o
- .debug_info    0x00000000000039dc       0x22 Startup/startup_stm32f103c6tx.o
+.debug_info     0x0000000000000000     0x1794
+ .debug_info    0x0000000000000000      0xbc7 LCD_Driver/LCD.o
+ .debug_info    0x0000000000000bc7      0xbab Src/main.o
+ .debug_info    0x0000000000001772       0x22 Startup/startup_stm32f103c6tx.o
 
-.debug_abbrev   0x0000000000000000      0x968
- .debug_abbrev  0x0000000000000000      0x1a6 KeyPad_Driver/KeyPad.o
- .debug_abbrev  0x00000000000001a6      0x223 LCD_Driver/LCD.o
- .debug_abbrev  0x00000000000003c9      0x241 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
- .debug_abbrev  0x000000000000060a      0x1a6 SevenSegment/seven_segment.o
- .debug_abbrev  0x00000000000007b0      0x1a6 Src/main.o
- .debug_abbrev  0x0000000000000956       0x12 Startup/startup_stm32f103c6tx.o
+.debug_abbrev   0x0000000000000000      0x3cc
+ .debug_abbrev  0x0000000000000000      0x223 LCD_Driver/LCD.o
+ .debug_abbrev  0x0000000000000223      0x197 Src/main.o
+ .debug_abbrev  0x00000000000003ba       0x12 Startup/startup_stm32f103c6tx.o
 
-.debug_loc      0x0000000000000000      0x6c4
- .debug_loc     0x0000000000000000       0x7c KeyPad_Driver/KeyPad.o
- .debug_loc     0x000000000000007c      0x220 LCD_Driver/LCD.o
- .debug_loc     0x000000000000029c      0x330 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
- .debug_loc     0x00000000000005cc       0x7c SevenSegment/seven_segment.o
- .debug_loc     0x0000000000000648       0x7c Src/main.o
+.debug_loc      0x0000000000000000      0x29c
+ .debug_loc     0x0000000000000000      0x220 LCD_Driver/LCD.o
+ .debug_loc     0x0000000000000220       0x7c Src/main.o
 
-.debug_aranges  0x0000000000000000      0x158
+.debug_aranges  0x0000000000000000       0xa8
  .debug_aranges
-                0x0000000000000000       0x28 KeyPad_Driver/KeyPad.o
+                0x0000000000000000       0x58 LCD_Driver/LCD.o
  .debug_aranges
-                0x0000000000000028       0x58 LCD_Driver/LCD.o
+                0x0000000000000058       0x28 Src/main.o
  .debug_aranges
-                0x0000000000000080       0x60 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
- .debug_aranges
-                0x00000000000000e0       0x28 SevenSegment/seven_segment.o
- .debug_aranges
-                0x0000000000000108       0x28 Src/main.o
- .debug_aranges
-                0x0000000000000130       0x28 Startup/startup_stm32f103c6tx.o
+                0x0000000000000080       0x28 Startup/startup_stm32f103c6tx.o
 
-.debug_ranges   0x0000000000000000      0x100
- .debug_ranges  0x0000000000000000       0x18 KeyPad_Driver/KeyPad.o
- .debug_ranges  0x0000000000000018       0x48 LCD_Driver/LCD.o
- .debug_ranges  0x0000000000000060       0x50 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
- .debug_ranges  0x00000000000000b0       0x18 SevenSegment/seven_segment.o
- .debug_ranges  0x00000000000000c8       0x18 Src/main.o
- .debug_ranges  0x00000000000000e0       0x20 Startup/startup_stm32f103c6tx.o
+.debug_ranges   0x0000000000000000       0x80
+ .debug_ranges  0x0000000000000000       0x48 LCD_Driver/LCD.o
+ .debug_ranges  0x0000000000000048       0x18 Src/main.o
+ .debug_ranges  0x0000000000000060       0x20 Startup/startup_stm32f103c6tx.o
 
-.debug_macro    0x0000000000000000     0x2933
- .debug_macro   0x0000000000000000      0x21d KeyPad_Driver/KeyPad.o
- .debug_macro   0x000000000000021d      0xa60 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000000c7d       0x22 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000000c9f       0x40 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000000cdf       0x18 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000000cf7       0x94 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000000d8b       0x3c KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000000dc7       0x34 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000000dfb       0x16 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000000e11       0x57 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000000e68       0x97 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000000eff      0x330 KeyPad_Driver/KeyPad.o
- .debug_macro   0x000000000000122f       0xfd KeyPad_Driver/KeyPad.o
- .debug_macro   0x000000000000132c       0x10 KeyPad_Driver/KeyPad.o
- .debug_macro   0x000000000000133c       0x52 KeyPad_Driver/KeyPad.o
- .debug_macro   0x000000000000138e       0x1f KeyPad_Driver/KeyPad.o
- .debug_macro   0x00000000000013ad       0x43 KeyPad_Driver/KeyPad.o
- .debug_macro   0x00000000000013f0       0x20 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000001410      0x1a3 KeyPad_Driver/KeyPad.o
- .debug_macro   0x00000000000015b3       0x10 KeyPad_Driver/KeyPad.o
- .debug_macro   0x00000000000015c3       0x6a KeyPad_Driver/KeyPad.o
- .debug_macro   0x000000000000162d       0x1c KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000001649       0x52 KeyPad_Driver/KeyPad.o
- .debug_macro   0x000000000000169b       0x40 KeyPad_Driver/KeyPad.o
- .debug_macro   0x00000000000016db       0x10 KeyPad_Driver/KeyPad.o
- .debug_macro   0x00000000000016eb       0x40 KeyPad_Driver/KeyPad.o
- .debug_macro   0x000000000000172b       0xd7 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000001802       0x1c KeyPad_Driver/KeyPad.o
- .debug_macro   0x000000000000181e       0x3d KeyPad_Driver/KeyPad.o
- .debug_macro   0x000000000000185b       0x16 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000001871      0x145 KeyPad_Driver/KeyPad.o
- .debug_macro   0x00000000000019b6       0xef KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000001aa5      0x1df KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000001c84       0x16 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000001c9a       0x35 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000001ccf       0x16 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000001ce5       0x29 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000001d0e       0xb4 KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000001dc2       0xca KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000001e8c       0x3a KeyPad_Driver/KeyPad.o
- .debug_macro   0x0000000000001ec6      0x21d LCD_Driver/LCD.o
- .debug_macro   0x00000000000020e3       0x6a LCD_Driver/LCD.o
- .debug_macro   0x000000000000214d      0x20a STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
- .debug_macro   0x0000000000002357      0x21d SevenSegment/seven_segment.o
- .debug_macro   0x0000000000002574       0x70 SevenSegment/seven_segment.o
- .debug_macro   0x00000000000025e4      0x229 Src/main.o
- .debug_macro   0x000000000000280d       0x70 Src/main.o
- .debug_macro   0x000000000000287d       0x40 Src/main.o
- .debug_macro   0x00000000000028bd       0x76 Src/main.o
+.debug_macro    0x0000000000000000      0x64d
+ .debug_macro   0x0000000000000000      0x21d LCD_Driver/LCD.o
+ .debug_macro   0x000000000000021d       0x6a LCD_Driver/LCD.o
+ .debug_macro   0x0000000000000287      0x23c Src/main.o
+ .debug_macro   0x00000000000004c3       0x70 Src/main.o
+ .debug_macro   0x0000000000000533       0x40 Src/main.o
+ .debug_macro   0x0000000000000573       0x76 Src/main.o
+ .debug_macro   0x00000000000005e9       0x64 Src/main.o
 
-.debug_line     0x0000000000000000     0x2633
- .debug_line    0x0000000000000000      0x797 KeyPad_Driver/KeyPad.o
- .debug_line    0x0000000000000797      0x7f8 LCD_Driver/LCD.o
- .debug_line    0x0000000000000f8f      0x762 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
- .debug_line    0x00000000000016f1      0x6e3 SevenSegment/seven_segment.o
- .debug_line    0x0000000000001dd4      0x7db Src/main.o
- .debug_line    0x00000000000025af       0x84 Startup/startup_stm32f103c6tx.o
+.debug_line     0x0000000000000000      0xff3
+ .debug_line    0x0000000000000000      0x7cd LCD_Driver/LCD.o
+ .debug_line    0x00000000000007cd      0x7a2 Src/main.o
+ .debug_line    0x0000000000000f6f       0x84 Startup/startup_stm32f103c6tx.o
 
-.debug_str      0x0000000000000000     0x8d2a
- .debug_str     0x0000000000000000     0x87f9 KeyPad_Driver/KeyPad.o
-                                       0x8a61 (size before relaxing)
- .debug_str     0x00000000000087f9      0x1f2 LCD_Driver/LCD.o
-                                       0x8b81 (size before relaxing)
- .debug_str     0x00000000000089eb      0x15a STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
-                                       0x8ae5 (size before relaxing)
- .debug_str     0x0000000000008b45      0x17c SevenSegment/seven_segment.o
-                                       0x8afd (size before relaxing)
- .debug_str     0x0000000000008cc1       0x38 Src/main.o
-                                       0x8cbd (size before relaxing)
- .debug_str     0x0000000000008cf9       0x31 Startup/startup_stm32f103c6tx.o
+.debug_str      0x0000000000000000     0x8d7f
+ .debug_str     0x0000000000000000     0x89ed LCD_Driver/LCD.o
+                                       0x8c53 (size before relaxing)
+ .debug_str     0x00000000000089ed      0x361 Src/main.o
+                                       0x8eea (size before relaxing)
+ .debug_str     0x0000000000008d4e       0x31 Startup/startup_stm32f103c6tx.o
                                          0x93 (size before relaxing)
 
 .comment        0x0000000000000000       0x7b
- .comment       0x0000000000000000       0x7b KeyPad_Driver/KeyPad.o
+ .comment       0x0000000000000000       0x7b LCD_Driver/LCD.o
                                          0x7c (size before relaxing)
- .comment       0x000000000000007b       0x7c LCD_Driver/LCD.o
- .comment       0x000000000000007b       0x7c STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
- .comment       0x000000000000007b       0x7c SevenSegment/seven_segment.o
  .comment       0x000000000000007b       0x7c Src/main.o
 
-.debug_frame    0x0000000000000000      0x3b0
- .debug_frame   0x0000000000000000       0x50 KeyPad_Driver/KeyPad.o
- .debug_frame   0x0000000000000050      0x11c LCD_Driver/LCD.o
- .debug_frame   0x000000000000016c      0x178 STM32F103C6_Drivers/STM32F103C6_GPIO_Driver.o
- .debug_frame   0x00000000000002e4       0x50 SevenSegment/seven_segment.o
- .debug_frame   0x0000000000000334       0x50 Src/main.o
- .debug_frame   0x0000000000000384       0x2c c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)
+.debug_frame    0x0000000000000000      0x198
+ .debug_frame   0x0000000000000000      0x11c LCD_Driver/LCD.o
+ .debug_frame   0x000000000000011c       0x50 Src/main.o
+ .debug_frame   0x000000000000016c       0x2c c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7-m\libc_nano.a(lib_a-init.o)

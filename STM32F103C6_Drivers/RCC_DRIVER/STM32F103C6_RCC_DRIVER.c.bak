@@ -1,0 +1,29 @@
+/*****************************************************************/
+/* Author      : Farha Emad                                      */
+/* Date        : 20 April 2023                                   */      
+/*****************************************************************/
+
+#include "STM32F103C6_RCC_DRIVER.h"
+
+
+uint8_t APB_Prescaler[] = {0,0,0,0,1,2,3,4};
+uint8_t AHB_Prescaler[] = {0,0,0,0,0,0,0,0,1,2,3,4,5,6,7,8};
+
+uint32_t MCAL_RCC_GetSYSCLK_Freq();
+uint32_t MCAL_RCC_GetHCLK_Freq()
+{
+	//Bits 7:4 HPRE: AHB prescaler
+	return (MCAL_RCC_GetSYSCLK_Freq() >> AHB_Prescaler[((RCC->CFGR)>>4) & 0b1111] );
+}
+
+uint32_t MCAL_RCC_GetPCLK1_Freq()
+{
+	//Bits 10:8 PPRE1: APB low-speed prescaler (APB1)
+	return (MCAL_RCC_GetHCLK_Freq() >> APB_Prescaler[((RCC->CFGR)>>8) & 0b111] );
+}
+
+uint32_t MCAL_RCC_GetPCLK2_Freq()
+{
+	//Bits 13:11 PPRE2: APB high-speed prescaler (APB2)
+	return ( MCAL_RCC_GetHCLK_Freq() >> APB_Prescaler[((RCC->CFGR)>>11) & 0b111] );	
+}
