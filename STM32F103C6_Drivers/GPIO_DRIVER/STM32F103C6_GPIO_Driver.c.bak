@@ -245,7 +245,7 @@ void MCAL_GPIO_WritePin(GPIO_TypeDef *GPIOx, uint16_t PinNumber, uint8_t value){
 	if((value != (uint8_t)GPIO_PIN_STATE_LOW))
 	{
 		//Port output data register (GPIOx_ODR)
-		GPIOx->ODR |= PinNumber;
+		//GPIOx->ODR |= PinNumber;
 
 		//using Port bit set/reset register (GPIOx_BSRR)
 		/*Bits 15:0 BSy: Port x Set bit y (y= 0 .. 15)
@@ -253,12 +253,12 @@ void MCAL_GPIO_WritePin(GPIO_TypeDef *GPIOx, uint16_t PinNumber, uint8_t value){
 		 *0: No action on the corresponding ODRx bit
 		 *1: Set the corresponding ODRx bit */
 
-		//GPIOx->BSRR = (uint32_t)PinNumber;
+		GPIOx->BSRR = (uint32_t)PinNumber;
 	}
 	else
 	{
 		//Port output data register (GPIOx_ODR)
-		GPIOx->ODR &= ~PinNumber;
+		//GPIOx->ODR &= ~PinNumber;
 
 		//Port bit reset register (GPIOx_BRR)
 		/*Bits 15:0 BRy: Port x Reset bit y (y= 0 .. 15)
@@ -266,7 +266,7 @@ void MCAL_GPIO_WritePin(GPIO_TypeDef *GPIOx, uint16_t PinNumber, uint8_t value){
 		 *0: No action on the corresponding ODRx bit
 		 *1: Reset the corresponding ODRx bit */
 
-		//GPIOx->BRR = (uint32_t)PinNumber;
+		GPIOx->BRR = (uint32_t)PinNumber;
 	}
 
 

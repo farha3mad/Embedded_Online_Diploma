@@ -3,7 +3,7 @@
 /* Date        : 23 April 2023                                   */      
 /*****************************************************************/
 
-#include "STM32F103C6_USART_DRIVER.h"
+#include "INC/STM32F103C6_USART_DRIVER.h"
 
 
 /**************** General Variables *******************/
@@ -26,7 +26,8 @@ USART_config * Global_USART3_conf = NULL;
 
 void MCAL_USART_init(USART_TypeDef *USARTx , USART_config *USART_conf)
 {
-	uint32_t Fclk,BRR;
+
+	uint32_t Fclk,BRR,CR1_temp = 0,CR2_temp = 0,CR3_temp = 0;
 
 
 
@@ -48,20 +49,20 @@ void MCAL_USART_init(USART_TypeDef *USARTx , USART_config *USART_conf)
 	}
 
 	//Enable USART peripheral
-	USARTx->CR1 |= (1<<13);		//Bit 13 UE: USART enable
+	CR1_temp |= (1<<13);		//Bit 13 UE: USART enable
 
 	//setting the configuration
-	USARTx->CR1 |= USART_conf->USART_MODE;
+	 CR1_temp |= USART_conf->USART_MODE;
 
-	USARTx->CR1 |= USART_conf->USART_PAYLOAD;
+	 CR1_temp |= USART_conf->USART_PAYLOAD;
 
-	USARTx->CR1 |= USART_conf->USART_IRQ;
+	 CR1_temp |= USART_conf->USART_IRQ;
 
-	USARTx->CR2 |= USART_conf->USART_STOP_BIT;
+	 CR2_temp |= USART_conf->USART_STOP_BIT;
 
-	USARTx->CR1 |= USART_conf->USART_PARITY_BIT;
+	 CR1_temp |= USART_conf->USART_PARITY_BIT;
 
-	USARTx->CR3 |= USART_conf->USART_HWFlowCtrl;
+	 CR3_temp |= USART_conf->USART_HWFlowCtrl;
 
 	//Baud Rate
 	//USART1        --> APB2 --> PCLK2
@@ -78,6 +79,10 @@ void MCAL_USART_init(USART_TypeDef *USARTx , USART_config *USART_conf)
 
 	BRR = USART_BRR_VALUE(Fclk , USART_conf->USART_BAUD_RATE);
 	USARTx->BRR = BRR;
+
+	USARTx->CR1 = CR1_temp;
+	USARTx->CR2 = CR2_temp;
+	USARTx->CR3 = CR3_temp;
 
 	//NVIC enable
 	//***********Uncompleted***************//
@@ -137,7 +142,7 @@ void MCAL_USART_SendData(USART_TypeDef *USARTx , uint16_t *data_buffer , enum po
 		//the shift register. An interrupt is generated if the TXEIE bit =1 in the USART_CR1 register. It
 		//is cleared by a write to the USART_DR register.
 
-		while(!((USARTx->SR) & 1<<7));	//wait until Data is transferred to the shift register
+		while(!((USARTx->SR) & 1<<7) );	//wait until Data is transferred to the shift register
 	}
 	if(USARTx == USART1){
 		if(Global_USART1_conf->USART_PAYLOAD == USART_PAYLOAD_8)

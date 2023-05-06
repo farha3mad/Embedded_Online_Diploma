@@ -58,11 +58,20 @@
 //-----------------------------
 
 #define AFIO_BASE								(0x40010000UL)
+
+//-----------------------------
+
 #define EXTI_BASE								(0x40010400UL)
+
+//-----------------------------
 
 //USART1
 #define USART1_BASE								(0x40013800UL)
 
+//-----------------------------
+
+//SPI1
+#define SPI1_BASE								(0x40013000UL)
 
 
 //-----------------------------
@@ -74,6 +83,11 @@
 
 //USART3
 #define USART3_BASE								(0x40004800UL)
+
+//-----------------------------
+
+//SPI2
+#define SPI2_BASE								(0x40003800UL)
 
 //==============================================================================================
 
@@ -172,6 +186,24 @@ typedef struct {
 
 
 //-*-*-*-*-*-*-*-*-*-*-*-
+//Peripheral register: SPI
+//-*-*-*-*-*-*-*-*-*-*-*
+
+typedef struct {
+
+	volatile uint32_t SPI_CR1;
+	volatile uint32_t SPI_CR2;
+	volatile uint32_t SPI_SR;
+	volatile uint32_t SPI_DR;
+	volatile uint32_t SPI_CRCPR;
+	volatile uint32_t SPI_RXCRCR;
+	volatile uint32_t SPI_TXCRCR;
+	volatile uint32_t SPI_I2SCFGR;
+	volatile uint32_t SPI_I2SPR;
+
+}SPI_TypeDef;
+
+//-*-*-*-*-*-*-*-*-*-*-*-
 //Peripheral Instants:
 //-*-*-*-*-*-*-*-*-*-*-*
 
@@ -188,6 +220,9 @@ typedef struct {
 #define USART1							((USART_TypeDef *)(USART1_BASE))
 #define USART2							((USART_TypeDef *)(USART2_BASE))
 #define USART3							((USART_TypeDef *)(USART3_BASE))
+
+#define SPI1							((SPI_TypeDef *)(SPI1_BASE))
+#define SPI2							((SPI_TypeDef *)(SPI2_BASE))
 
 //==============================================================================================
 
@@ -213,6 +248,13 @@ typedef struct {
 #define USART2_CLOCK_DISABLE() 			((RCC->APB1RSTR)|= 1<<17)
 #define USART3_CLOCK_DISABLE() 			((RCC->APB1RSTR)|= 1<<18)
 
+//Enable SPI
+#define SPI1_CLOCK_ENABLE() 			((RCC->APB2ENR)|= 1<<12)
+#define SPI2_CLOCK_ENABLE() 			((RCC->APB1ENR)|= 1<<14)
+
+//Disable USART
+#define SPI1_CLOCK_DISABLE() 			((RCC->APB2RSTR)|= 1<<12)
+#define SPI2_CLOCK_DISABLE() 			((RCC->APB1RSTR)|= 1<<14)
 
 //-*-*-*-*-*-*-*-*-*-*-*-
 //IVT Macros:
@@ -235,6 +277,25 @@ typedef struct {
 #define EXTI14_IRQ		40
 #define EXTI15_IRQ		40
 #define EXTI16_IRQ		40
+
+//USART
+#define USART1_IRQ		37
+#define USART2_IRQ		38
+#define USART3_IRQ		39
+
+//SPI
+#define SPI1_IRQ		35
+#define SPI2_IRQ		36
+
+
+
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+//NVIC IRQ enable/disable Macros:
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+
+
+
+
 
 
 //-*-*-*-*-*-*-*-*-*-*-*-

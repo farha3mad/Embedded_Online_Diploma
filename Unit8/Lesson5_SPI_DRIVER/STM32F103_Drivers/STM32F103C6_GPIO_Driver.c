@@ -5,7 +5,7 @@
  */
 
 
-#include "STM32F103C6_GPIO_Driver.h"
+#include "INC/STM32F103C6_GPIO_Driver.h"
 
 uint8_t get_pin_position(uint16_t PinNumber){
 

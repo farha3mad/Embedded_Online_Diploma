@@ -58,22 +58,12 @@
 //-----------------------------
 
 #define AFIO_BASE								(0x40010000UL)
-#define EXTI_BASE								(0x40010400UL)
-
-//USART1
-#define USART1_BASE								(0x40013800UL)
-
-
+#define EXTI_BASE								(0x4000400UL)
 
 //-----------------------------
 //Base addresses for APB1 Peripherals
 //-----------------------------
 
-//USART2
-#define USART2_BASE								(0x40004400UL)
-
-//USART3
-#define USART3_BASE								(0x40004800UL)
 
 //==============================================================================================
 
@@ -154,22 +144,6 @@ typedef struct {
 
 }EXTI_TypeDef;
 
-//-*-*-*-*-*-*-*-*-*-*-*-
-//Peripheral register: USART
-//-*-*-*-*-*-*-*-*-*-*-*
-
-typedef struct {
-
-	volatile uint32_t SR;
-	volatile uint32_t DR;
-	volatile uint32_t BRR;
-	volatile uint32_t CR1;
-	volatile uint32_t CR2;
-	volatile uint32_t CR3;
-	volatile uint32_t GTPR;
-
-}USART_TypeDef;
-
 
 //-*-*-*-*-*-*-*-*-*-*-*-
 //Peripheral Instants:
@@ -185,10 +159,6 @@ typedef struct {
 #define AFIO							((AFIO_TypeDef *)(AFIO_BASE))
 #define EXTI							((EXTI_TypeDef *)(EXTI_BASE))
 
-#define USART1							((USART_TypeDef *)(USART1_BASE))
-#define USART2							((USART_TypeDef *)(USART2_BASE))
-#define USART3							((USART_TypeDef *)(USART3_BASE))
-
 //==============================================================================================
 
 
@@ -202,16 +172,6 @@ typedef struct {
 #define GPIOD_CLOCK_ENABLE() 			((RCC->APB2ENR)|= 1<<5)
 #define GPIOE_CLOCK_ENABLE() 			((RCC->APB2ENR)|= 1<<6)
 #define AFIO_CLOCK_ENABLE() 			((RCC->APB2ENR)|= 1<<0)
-
-//Enable USART
-#define USART1_CLOCK_ENABLE() 			((RCC->APB2ENR)|= 1<<14)
-#define USART2_CLOCK_ENABLE() 			((RCC->APB1ENR)|= 1<<17)
-#define USART3_CLOCK_ENABLE() 			((RCC->APB1ENR)|= 1<<18)
-
-//Disable USART
-#define USART1_CLOCK_DISABLE() 			((RCC->APB2RSTR)|= 1<<14)
-#define USART2_CLOCK_DISABLE() 			((RCC->APB1RSTR)|= 1<<17)
-#define USART3_CLOCK_DISABLE() 			((RCC->APB1RSTR)|= 1<<18)
 
 
 //-*-*-*-*-*-*-*-*-*-*-*-

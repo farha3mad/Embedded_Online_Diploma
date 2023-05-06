@@ -3,7 +3,7 @@
 /* Date        : 23 April 2023                                   */      
 /*****************************************************************/
 
-#include "INC/STM32F103C6_USART_DRIVER.h"
+#include "STM32F103C6_USART_DRIVER.h"
 
 
 /**************** General Variables *******************/
